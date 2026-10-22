@@ -1,0 +1,133 @@
+# -----------------------------------------------------------------------------
+# Build products / generated runtime
+# -----------------------------------------------------------------------------
+build/
+out/
+dist/
+*.bin
+*.pxe
+*.img
+*.iso
+*.lst
+*.map
+*.sym
+
+# Native/controller build artifacts.
+*.exe
+*.test
+*.prof
+coverage.out
+
+# Generated assembly/includes may contain embedded credentials.
+build/generated/
+**/generated/local-secrets.inc
+local-secrets.inc
+
+# -----------------------------------------------------------------------------
+# Secrets and machine-local configuration
+# -----------------------------------------------------------------------------
+config/token.txt
+config/poc-account-token.txt
+config/pin.bin
+
+# Common private/local variants. Keep examples/templates tracked.
+config/*.local
+config/*.secret
+config/*.secrets
+config/*.private
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# -----------------------------------------------------------------------------
+# PXE / TFTP deployment state
+# -----------------------------------------------------------------------------
+tftp/
+tftp-root/
+pxe-root/
+pxe/
+*.dhcp
+*.leases
+*.pid
+
+# -----------------------------------------------------------------------------
+# Hardware captures / diagnostics
+# -----------------------------------------------------------------------------
+*.log
+*.trace
+*.dump
+*.dmp
+*.pcap
+*.pcapng
+
+putty*.txt
+putty*.log
+PuTTY*.txt
+PuTTY*.log
+serial*.txt
+serial*.log
+
+# PowerShell transcripts can contain commands, paths, tokens, or serial output.
+PowerShell_transcript.*
+powershell_transcript.*
+
+# -----------------------------------------------------------------------------
+# Fresh-history/export scratch
+# -----------------------------------------------------------------------------
+fresh-history/
+fresh-history-*/
+export/
+exported/
+repo-export/
+history-export/
+*.bundle
+
+# Preserve the exporter itself; only its generated work trees belong above.
+!export-fresh-history.ps1
+
+# -----------------------------------------------------------------------------
+# Editors / IDEs
+# -----------------------------------------------------------------------------
+.vs/
+.vscode/
+.idea/
+
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.code-workspace
+
+# -----------------------------------------------------------------------------
+# OS / shell debris
+# -----------------------------------------------------------------------------
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+*.stackdump
+*~
+*.swp
+*.swo
+
+# -----------------------------------------------------------------------------
+# Temporary / backup files
+# -----------------------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*.patch~
